@@ -1,0 +1,404 @@
+@include('header')
+        <!--//==Header End==//-->
+        <div class="clear"></div>
+        <div class="slider-wrap">
+            <div class="fullwidthbanner-container">
+                <div class="fullwidthbanner">
+                    <ul>
+                        <!-- SLIDE 4 -->
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                            <!-- MAIN IMAGE -->
+                            <img src="assets/img/slider/2.jpg"  alt="Image" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption sfb customin tp-resizeme slide-one-text-1"
+                                data-x="385"
+                                data-y="200"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="1600"
+                                data-start="1850"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.5"
+                                data-endelementdelay="0.1"
+                                data-linktoslide="next"
+                                style="z-index: 12;">new arrivals-2017</div>
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption sft tp-resizeme slide-one-text-2"
+                                data-x="380"
+                                data-y="225"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-speed="1600"
+                                data-start="2050"
+                                data-easing="Power4.easeOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.7"
+                                data-endelementdelay="0.1"
+                                data-endspeed="500"
+                                data-endeasing="Power1.easeOut"
+                                style="z-index: 7;line-height: 1;">new style</div>
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption sft tp-resizeme slide-one-text-3"
+                                data-x="380"
+                                data-y="270"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-speed="1600"
+                                data-start="2250"
+                                data-easing="Power4.easeOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.7"
+                                data-endelementdelay="0.1"
+                                data-endspeed="500"
+                                data-endeasing="Power1.easeOut"
+                                style="z-index: 7;line-height: 1.5;">clothes</div>
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption sfb customin tp-resizeme slide-one-text-4"
+                                data-x="380"
+                                data-y="390"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="1600"
+                                data-start="2300"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.7"
+                                data-endelementdelay="0.1"
+                                data-linktoslide="next"
+                                style="z-index: 12;"><span>Suspendisse commodo auctor molestie. Mauris arisusvitae massa consequat<br>pharetra. Suspendisse dapibus erat lectus rutrum bibendum.</span></div>
+                            <!-- LAYER NR. 5 -->
+                            <div class="tp-caption sfb customin tp-resizeme slide-one-text-5"
+                                data-x="380"
+                                data-y="490"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="1600"
+                                data-start="2300"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.7"
+                                data-endelementdelay="0.1"
+                                data-linktoslide="next"
+                                style="z-index: 12;"><a class="shop_btn" href="#">Shop Now</a></div>
+                        </li>
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
+                            <!-- MAIN IMAGE -->
+                            <img src="assets/img/slider/bg1.png"  alt="Image" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption sfb customin tp-resizeme slide-one-text-6"
+                                data-x="1050"
+                                data-y="160"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="1600"
+                                data-start="1850"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.1"
+                                data-endelementdelay="0.1"
+                                data-linktoslide="next"
+                                style="z-index: 12;">latest</div>
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption sft tp-resizeme slide-one-text-7"
+                                data-x="1050"
+                                data-y="214"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-speed="2300"
+                                data-start="2000"
+                                data-easing="Power4.easeOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.1"
+                                data-endelementdelay="0.1"
+                                data-endspeed="500"
+                                data-endeasing="Power1.easeOut"
+                                style="z-index: 7;line-height: 1;">trending<br>fashion</div>
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption sft tp-resizeme slide-one-text-8"
+                                data-x="1050"
+                                data-y="354"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-speed="1600"
+                                data-start="2200"
+                                data-easing="Power4.easeOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.1"
+                                data-endelementdelay="0.1"
+                                data-endspeed="500"
+                                data-endeasing="Power1.easeOut"
+                                style="z-index: 7;line-height: 1.5;">50%OFF</div>
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption sfb customin tp-resizeme slide-one-text-9"
+                                data-x="1050"
+                                data-y="465"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="1600"
+                                data-start="2300"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.1"
+                                data-endelementdelay="0.1"
+                                data-linktoslide="next"
+                                style="z-index: 12;">New More Products Comming Next Week<br>Be ready for them they will blow your Mind.</div>
+                            <!-- LAYER NR. 5 -->
+                            <div class="tp-caption sfb customin tp-resizeme slide-one-text-5"
+                                data-x="1050"
+                                data-y="540"
+                                data-hoffset="0"
+                                data-voffset="0"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="1600"
+                                data-start="2300"
+                                data-easing="Power3.easeInOut"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.1"
+                                data-endelementdelay="0.1"
+                                data-linktoslide="next"
+                                style="z-index: 12;"><a class="shop_btn" href="#">Shop Now</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- END HOME SLIDER -->
+        <section id="shop-category" class="tb-margin-30 shop-category">
+            <div class="container no-pad">
+              <a href="/Administration">  <div class="col-sm-6 col-md-6 wv_hovereffect cetagory-left">
+                    <div class="wv_overlay"></div>
+                    <div class="imagee">
+                        <img src="/admin.png" alt="shop-left"/>
+                    </div>
+                    <div class="winter-collection">
+                        <h1 style="margin-top:120px; letter-spacing:0px" >Administration <br/> Office</h1>
+                    </div>
+                </div></a>
+                <div class="col-sm-3 col-md-3 wv_hovereffect womens-sale">
+                    <div class="wv_overlay1"></div>
+                    <div class="imagee">
+                        <img src="/assets/img/all/shop-right-1.jpg" alt=" womens sale"/>
+                    </div>
+                    <h2>Womens</h2>
+                </div>
+                <div class="col-sm-3 col-md-3 wv_hovereffect mens-sale ">
+                    <div class="wv_overlay2"></div>
+                    <div class="imagee">
+                        <img src="/assets/img/all/shop-right-2.jpg" alt="mens sale"/>
+                    </div>
+                    <h2>Mens</h2>
+                </div>
+                <div class="col-sm-6 col-md-6 wv_hovereffect accesories">
+                    <div class="wv_overlay3"></div>
+                    <div class="imagee">
+                        <img src="/assets/img/all/shop-right-bottom.jpg" alt="Accesories"/>
+                    </div>
+                    <div class="accesories-title">
+                        <h2>fresh</h2>
+                        <p>Man-New Accessories</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--//==Women Section Start==//-->
+       <!-- <div id="show"></div> -->
+       <section class="women-section padTB100">
+            <div class="container">
+                <div class="row pad-s15">
+                    <div class="col-md-12">
+                        <div class="wv-heading-style2">
+                            <h2>Floors</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <!--wa Info Tabs-->
+                        <div class="wa-info-tabs">
+                            <!--wa Tabs-->
+                            <div class="wa-tabs category-tab" id="wa-tabs">
+                                <!--Tab Btns-->
+                                <div class="wv_tab_btns clearfix">
+                                <?php  foreach ($data as $value):?>
+                                <a href="#<?php echo $value->id?>" class="womens_btn tab-btn wv_tbtn active-btn"><?php echo $value->name?></a>
+                                <?php endforeach?>
+                                 </div>
+                                <!--Tabs Container-->
+                                <?php  foreach ($data as $key => $value):?>
+                                <div class="tabs-container wv_tabs_container">
+                              
+                                    <div class="row">
+                                        <!--Tab first Content item Start-->
+                                        <?php if ($key == '0'):?>
+                                        <div class="tab womens_tab active-tab" id="<?php echo $value->id?>">
+                                        <?php else:?>
+                                        <div class="tab womens_tab" id="<?php echo $value->id?>">
+                                        <?php endif?>
+                                        <div class="owl-carousel-style1" >
+                                            <?php  foreach ($store as $val):?>
+                                            <?php if ($val->floor == $value->id):?>
+                                                <div class="wa-item">
+                                                    <div class="col-md-3">
+                                                        <div class="wa-theme-design-block">
+                                                          <a href="/Frontend/Store/<?php echo $val->id?>">  <figure class="dark-theme">
+                                                                <img style="height:250px;width:250px"  src="/store/<?php echo $val->logo?>" alt="Women Thumbnail">
+                                                            </figure></a>
+                                                            <div class="block-caption1">
+                                                                <a href="/Frontend/Store/<?php echo $val->id?>" ><h4><?php echo $val->name?></h4></a>
+                                                              
+                                                                <div class="clear"></div>
+                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php endif?>
+                                                <?php endforeach?>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                   
+                                </div> <?php endforeach?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--//==Women Section End==//-->
+        <!--//======= Banner_add Start =======//--> 
+        <section class="banner-add">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 add-banner">
+                        <div class="banner-left">
+                            <img src="/assets/img/all/banner_left.jpg" alt=""/>
+                        </div>
+                        <div class="left-banner-title">
+                            <h3>WOMEN TOP</h3>
+                            <p>SAVE UP TO 40% OFF</p>
+                            <button type="button" class="wv_button marT15">VIEW collection</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 add-banner">
+                        <div class="banner-right">
+                            <img src="assets/img/all/banner_right.jpg" alt=""/>
+                        </div>
+                        <div class="right-banner-title">
+                            <h3>MEN SUITS</h3>
+                            <p>SAVE UP TO 20% OFF</p>
+                            <button type="button" class="wv_button marT15">VIEW collection</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--//======= Banner_add Start End =======//--> 
+        <!--//======= Men Section Start=======//-->
+        <!--//==Men Section Start==//-->
+        <section class="login-page padTB100">
+            <div class="container">
+              
+            </div>
+        </section>
+        <!--//==Men Section End==//-->	
+        <section class="accessories-add">
+            <div class="container">
+                <div class="col-md-12 add-banner">
+                    <div class="accessories_overlay"></div>
+                    <img src="/assets/img/all/accessories_add.jpg" alt="">
+                    <div class="accessories_banner">
+                        <h4>Accessories</h4>
+                        <p>Sale up to 25% off and Get an existing offer of<br>brand new collections</p>
+                    </div>
+        </section>
+        <!--//======= Blog Section Start=======//-->
+     
+        <!--//======= Blog Section End=======//-->  		
+        <!--//======= Service Start =======//--> 
+        <section class="Service">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 service_main">
+                        <div class="service_icon">
+                            <img src="/assets/img/icons/icon1.png" alt="">
+                        </div>
+                        <div class="service_text">
+                            <h5>free shipping</h5>
+                           
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 service_main">
+                        <div class="service_icon">
+                            <img src="/assets/img/icons/icon2.png" alt="">
+                        </div>
+                        <div class="service_text">
+                            <h5>24/7 Support</h5>
+                           
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 service_main">
+                        <div class="service_icon">
+                            <img src="/assets/img/icons/icon3.png" alt="">
+                        </div>
+                        <div class="service_text">
+                            <h5>money back guarantee</h5>
+                           
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 service_main">
+                        <div class="service_icon">
+                            <img src="/assets/img/icons/icon4.png" alt="">
+                        </div>
+                        <div class="service_text">
+                            <h5>free gift coupons</h5>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--//======= Service End =======//--> 
+        <!--//=======Footer Start=======//--> 
+  		@include('footer')
+        <!--//=======Footer End=======//--> 
+    
+       
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/assets/js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <!-- jQuery plugins library-->
+        <script type="text/javascript" src="/assets/plugins/menu/js/hover-dropdown-menu.js"></script> 
+        <script type="text/javascript" src="/assets/plugins/menu/js/jquery.hover-dropdown-menu-addon.js"></script>	
+        <script src="/assets/plugins/owl-carousel/js/owl.carousel.js"></script>	
+        <script type="text/javascript" src="/assets/plugins/counter/js/jquery.countTo.js"></script> 
+        <script type="text/javascript" src="/assets/plugins/counter/js/jquery.appear.js"></script>  	
+        <script src="/assets/plugins/mixitup/js/jquery.mixitup.js"></script>	  
+        <script src="/assets/plugins/fancymedia/js/jquery.fancybox.pack.js"></script>
+        <script src="/assets/plugins/fancymedia/js/jquery.fancybox-media.js"></script> 
+        <script type="text/javascript" src="/assets/plugins/revslider/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="/assets/plugins/revslider/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="/assets/js/switcher.js"></script> 
+        <!-- Custom JS -->
+        <script type="text/javascript" src="/assets/js/main.js"></script> 
+        <!-- <script src="/dist/Frontend/bundleFloorShow.js"></script> -->
+    </body>
+
+<!-- Mirrored from webvillee.com/html/myshop/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Sep 2017 09:38:47 GMT -->
+</html>

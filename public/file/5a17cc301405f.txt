@@ -1,0 +1,177 @@
+      <footer id="main-footer"  class="dark-footer">
+            <!--Upper Footer Block-->
+            <div class="upper-footer wv_footer">
+                <div class="container">
+                    <div class="row pad-s15">
+                        <!--Widget Block-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget contact-widget">
+                                <h3>Contact</h3>
+                                <p><span class="square-icon"><i class="fa fa-map-marker"></i></span>PO Box 16122 Collins Street <br>
+                                    West Victoria 8007 Australia
+                                </p>
+                                <p><span class="square-icon"><i class="fa fa-phone"></i></span>+61 3 8376 6284 <br>
+                                    +61 3 8376 6284
+                                </p>
+                                <p><span class="square-icon"><i class="fa fa-envelope-o"></i></span>+61 3 8376 6284<br>
+                                    +61 3 8376 6284
+                                </p>
+                            </div>
+                        </div>
+                        <!--Widget Block-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h3>Floors</h3>
+                               
+                                <ul id="viewFloor">
+                                 
+                                </ul>
+                         
+                            </div>
+                        </div>
+                        <!--Widget Block-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h3>Category</h3>
+                                
+                                <ul id="showCategory">
+                                </ul>
+                                  
+                            </div>
+                        </div>
+                        <!--Widget Block-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget">
+                                <h3>Become A Vendor</h3>
+                            <!--//==Contact Form Start==//-->
+                            <form class="contact-form" action="javascript:void(0);">
+                                <div class="row">
+                                    <!--//==Contact Input Field==//-->
+                                    <div class="col-md-12 form-group">
+                                        <input class="wv_form_focus" style="color:#f5e5e5" type="text" id="name" placeholder="Name:">
+                                    </div>
+                                    <!--//==Contact Input Field==//-->
+                                    <div class="col-md-12 form-group">
+                                        <input class="wv_form_focus" style="color:#f5e5e5" type="email"  id="email" placeholder="Email:">
+                                    </div>
+                                    
+                                <input type="hidden" id="token" value="{{ csrf_token() }}">  
+                                    <div class="col-md-12 form-group">
+                                        <input class="wv_form_focus" style="color:#f5e5e5" type="password" id="password" placeholder="password:">
+                                    </div>
+                                    <!--//==Contact Input Field==//-->
+                                    <div class="col-md-12 form-group">
+                                        <input class="wv_form_focus" style="color:#f5e5e5" type="number" id="contact" placeholder="Contact:">
+                                    </div>
+                                   
+                                    <div class="col-md-12">
+                                        <button type="submit" style="border-color:#f5e5e5; color:#f5e5e5"  class="wv_button responsive_contact_button wv_broad  send">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!--//==Contact Form End==//-->
+                     
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-12 wv_social">
+                            <ul class="col-md-12 social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Copyright Footer Block-->
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row pad-s15">
+                        <div class="col-md-6 copy-right">
+                            <p>Copyright © 2017 MnM Mall All Rights Reserved</p>
+                        </div>
+                        <!-- <div class="col-md-6 payment-method text-right">
+                            <ul class="col-md-12 wv_pay">
+                                <li><a href="#"></a><img src="/assets/img/icons/pay1.png" alt=""></li>
+                                <li><a href="#"></a><img src="/assets/img/icons/pay2.png" alt=""></li>
+                                <li><a href="#"></a><img src="/assets/img/icons/pay3.png" alt=""></li>
+                                <li><a href="#"></a><img src="/assets/img/icons/pay4.png" alt=""></li>
+                                <li><a href="#"></a><img src="/assets/img/icons/pay5.png" alt=""></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script type="text/javascript">
+
+
+$('.send').on('click',function(){
+
+//	alert($('#type_id').val());
+	var Data = new Object();
+	Data.name = $('#name').val();
+    Data.email = $('#email').val();
+    Data.contact = $('#contact').val();
+    Data.password = $('#password').val();
+	Data._token = $('#token').val();
+	
+	if ($('#name').val() == '') {
+		alert('insert name')
+    }
+    else if($('#email').val() == '')
+    {
+        alert('insert email')
+    }
+    else if($('#contact').val() == '')
+    {
+        alert('insert contact')
+    }
+    else if($('#password').val() == '')
+    {
+        alert('insert subject')
+    }
+	else{
+
+        $.ajax({
+        url: '/Frontend/Main/VendorCheck/'+$('#email').val(),
+        success: function(response){
+            if (response == 'error') {
+                alert('email is already registered');
+            } else {
+    $.ajax({
+        url: '/Frontend/Main/VendorAdd',
+        data: Data,
+        type: 'post',
+        success: function(response){
+            
+                    alert('Vendor successfull');
+                    setTimeout(()=> {
+                            window.location.href = '/VendorAdmin'
+                        },1500);
+                      
+            
+        }
+           
+});
+
+}
+	
+	}
+ 
+});
+    }
+});
+</script>  
+        
+       <script src="/dist/Frontend/Footer/bundleCategoryShow.js"></script>
+       
+       <script src="/dist/Frontend/Footer/bundleFloorView.js"></script>

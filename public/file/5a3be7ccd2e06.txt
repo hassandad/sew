@@ -1,0 +1,853 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 22, 2017 at 12:51 PM
+-- Server version: 5.7.20-0ubuntu0.16.04.1
+-- PHP Version: 7.1.11-1+ubuntu16.04.1+deb.sury.org+1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `sew`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assignment`
+--
+
+CREATE TABLE `assignment` (
+  `id` int(11) NOT NULL,
+  `topic` varchar(100) DEFAULT NULL,
+  `type_id` int(11) DEFAULT NULL,
+  `subject_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `detail` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `page` int(11) DEFAULT NULL,
+  `word` int(11) DEFAULT NULL,
+  `service` varchar(25) DEFAULT NULL,
+  `academic` varchar(50) DEFAULT NULL,
+  `format_id` int(11) DEFAULT NULL,
+  `deadline` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0',
+  `created_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `assignment`
+--
+
+INSERT INTO `assignment` (`id`, `topic`, `type_id`, `subject_id`, `user_id`, `detail`, `file`, `page`, `word`, `service`, `academic`, `format_id`, `deadline`, `price`, `status`, `created_on`) VALUES
+(1, 'new', 3, 19, 22, '', NULL, 1, 5, 'Custom Writing', 'Middle School', 1, 1, 12, 0, '2017-11-03 17:16:36'),
+(2, 'dg', 7, 31, 22, '', NULL, 1, 270, 'Custom Writing', 'Middle School', 1, 1, 15, 1, '2017-11-03 17:29:22'),
+(3, 'aaa', 12, 55, 22, '', NULL, 1, 270, 'Custom Writing', 'Middle School', 1, 1, 15, 2, '2017-11-03 18:21:25'),
+(4, 'Mathmatics', 2, 1, 22, '', NULL, 1, 270, 'Custom Writing', 'Middle School', 1, 1, 15, 3, '2017-11-03 18:23:56'),
+(5, 'Science', 8, 8, 22, '', NULL, 1, 270, 'Custom Writing', 'Middle School', 1, 1, 15, 0, '2017-11-05 09:19:12'),
+(6, 'General', 6, 5, 22, '', NULL, 1, 270, 'Custom Writing', 'Middle School', 1, 1, 15, 0, '2017-11-05 09:37:14');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assignment_bid`
+--
+
+CREATE TABLE `assignment_bid` (
+  `id` int(11) NOT NULL,
+  `assignment_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `amount` int(11) NOT NULL DEFAULT '0',
+  `type` tinyint(1) NOT NULL DEFAULT '0',
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `message` varchar(255) DEFAULT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `assignment_bid`
+--
+
+INSERT INTO `assignment_bid` (`id`, `assignment_id`, `user_id`, `amount`, `type`, `status`, `message`, `created_on`) VALUES
+(1, 1, 2, 20, 0, 0, 'Hey pal I can do this in very cheap & good work\n', '2017-11-05 18:16:27'),
+(2, 1, 3, 0, 1, 0, '14 if you want perfect', '2017-11-05 18:16:27'),
+(3, 1, 4, 15, 1, 0, '8 here baby', '2017-11-05 18:16:27'),
+(4, 1, 5, 20, 0, 0, 'bro 10', '2017-11-05 18:16:27'),
+(5, 1, 20, 0, 1, 0, 'cutest here 7', '2017-11-05 18:16:27'),
+(7, 2, 4, 0, 0, 0, 'Hey pal I can do this in 10$', '2017-11-05 18:16:27'),
+(8, 2, 5, 0, 0, 0, '14 if you want perfect', '2017-11-05 18:16:27'),
+(9, 3, 2, 0, 0, 0, 'Hey pal I can do this in 10$', '2017-11-05 18:16:27'),
+(10, 3, 20, 0, 0, 0, '8 here baby', '2017-11-05 18:16:27'),
+(11, 3, 3, 0, 0, 0, '14 if you want perfect', '2017-11-05 18:16:31'),
+(12, 4, 3, 0, 0, 0, 'Hey pal I can do this in 10$', '2017-11-05 18:16:31'),
+(13, 5, 20, 0, 0, 0, 'Hey pal I can do this in 10$', '2017-11-05 18:16:31'),
+(14, 5, 2, 0, 0, 0, '14 if you want perfect', '2017-11-05 18:16:31'),
+(15, 5, 3, 0, 0, 0, '8 here baby', '2017-11-05 18:16:31'),
+(16, 5, 4, 0, 0, 0, 'bro 10', '2017-11-05 18:16:31'),
+(17, 5, 5, 0, 0, 0, 'cutest here 7', '2017-11-05 18:16:31'),
+(51, 2, 2, 20, 2, 0, 'mew just check\n', '2017-11-22 04:45:08'),
+(52, 2, 2, 20, 2, 0, 'mew just check\n', '2017-11-22 04:45:57'),
+(53, 6, 2, 16, 2, 0, 'fisrt here', '2017-11-22 04:49:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assignment_format`
+--
+
+CREATE TABLE `assignment_format` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `assignment_format`
+--
+
+INSERT INTO `assignment_format` (`id`, `name`, `created_on`) VALUES
+(1, 'AMA', '2017-10-30 21:42:15'),
+(2, 'APA', '2017-10-30 21:42:15'),
+(3, 'ASA', '2017-10-30 21:42:15'),
+(4, 'CBE', '2017-10-30 21:43:20'),
+(5, 'MLA', '2017-10-30 21:42:15'),
+(6, 'Chicago/Turabian', '2017-10-30 21:42:15'),
+(7, 'Oxford', '2017-10-30 21:42:15'),
+(8, 'McGill Guide', '2017-10-30 21:42:15'),
+(9, 'Other', '2017-10-30 21:42:15');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bids`
+--
+
+CREATE TABLE `bids` (
+  `id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `type` int(11) NOT NULL,
+  `amount` varchar(11) DEFAULT NULL,
+  `description` text NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bids`
+--
+
+INSERT INTO `bids` (`id`, `order_id`, `type`, `amount`, `description`, `user_id`, `created`) VALUES
+(1, 1, 1, '0', 'My new bid', 20, '2017-10-30'),
+(2, 1, 1, '0', '', 2, '2017-11-21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bid_comments`
+--
+
+CREATE TABLE `bid_comments` (
+  `id` int(11) NOT NULL,
+  `comment` varchar(200) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `bid_id` int(11) NOT NULL,
+  `role` tinyint(1) NOT NULL,
+  `created` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bid_comments`
+--
+
+INSERT INTO `bid_comments` (`id`, `comment`, `user_id`, `bid_id`, `role`, `created`) VALUES
+(1, 'aasasasa', 2, 1, 2, '2017-10-30'),
+(2, 'g bhai', 20, 1, 2, '2017-10-30'),
+(3, 'asdsadsad', 20, 1, 2, '2017-10-30'),
+(4, 'sdas', 22, 1, 1, '2017-11-04');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bid_review`
+--
+
+CREATE TABLE `bid_review` (
+  `id` int(11) NOT NULL,
+  `positive` tinyint(1) DEFAULT NULL,
+  `negative` tinyint(1) DEFAULT NULL,
+  `bid_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bid_review`
+--
+
+INSERT INTO `bid_review` (`id`, `positive`, `negative`, `bid_id`, `user_id`) VALUES
+(1, NULL, 1, 1, 2),
+(2, 1, NULL, 3, 2),
+(3, NULL, 1, 2, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE `chat` (
+  `id` int(11) NOT NULL,
+  `student_id` int(11) DEFAULT NULL,
+  `writer_id` int(11) DEFAULT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` tinyint(1) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `chat`
+--
+
+INSERT INTO `chat` (`id`, `student_id`, `writer_id`, `created_on`, `status`) VALUES
+(1, 22, 2, '2017-11-05 21:08:44', 1),
+(2, 22, 3, '2017-11-05 21:09:05', 1),
+(3, 22, 5, '2017-11-05 21:10:03', 1),
+(4, 22, 20, '2017-11-05 21:16:10', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL,
+  `sender_id` int(11) DEFAULT NULL,
+  `reciver_id` int(11) DEFAULT NULL,
+  `message` varchar(255) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`id`, `sender_id`, `reciver_id`, `message`, `status`, `created_on`) VALUES
+(1, 2, 22, 'Hey pal I can do this in 10$', 0, '2017-11-05 21:14:33'),
+(2, 3, 22, '14 if you want perfect', 0, '2017-11-05 21:14:57'),
+(3, 20, 22, 'Hey pal I can do this in 10$', 0, '2017-11-05 21:16:10'),
+(4, 22, 2, '14 if you want perfect', 0, '2017-11-05 22:39:38'),
+(5, 22, 20, '14 if you want perfect', 0, '2017-11-05 22:39:38'),
+(6, 22, 3, '14 if you want perfect', 0, '2017-11-05 22:39:38'),
+(7, 22, 3, 'Hey pal I can do this in 10$', 0, '2017-11-05 22:39:38'),
+(8, 22, 20, 'Hey pal I can do this in 10$', 0, '2017-11-05 22:39:38'),
+(9, 22, 2, 'Hey pal I can do this in 10$', 0, '2017-11-05 22:39:40'),
+(10, 22, 2, NULL, 0, '2017-11-05 22:39:40'),
+(11, NULL, NULL, NULL, 0, '2017-11-05 22:39:40'),
+(12, NULL, NULL, NULL, 0, '2017-11-05 22:39:40'),
+(13, NULL, NULL, NULL, 0, '2017-11-05 22:39:40'),
+(14, 3, 22, '8 here baby', 0, '2017-11-06 06:30:15'),
+(15, 22, 2, 'aaaa', 0, '2017-11-06 06:43:03'),
+(16, 22, 2, 'nothing that you can do\n', 0, '2017-11-06 06:43:17'),
+(17, 22, 2, 'i can hire you', 0, '2017-11-06 06:44:18'),
+(18, 22, 2, '', 0, '2017-11-06 06:44:25'),
+(19, 22, 2, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 0, '2017-11-06 06:49:46'),
+(20, 22, 3, 'abc', 0, '2017-11-06 06:53:20'),
+(21, 22, 2, 'hello i want some changes', 0, '2017-11-06 07:20:08'),
+(22, 22, 20, 'alaw hogaya', 0, '2017-11-06 07:20:31');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order`
+--
+
+CREATE TABLE `order` (
+  `id` int(11) NOT NULL,
+  `assignment_id` int(11) NOT NULL,
+  `writer_id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '0',
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `order`
+--
+
+INSERT INTO `order` (`id`, `assignment_id`, `writer_id`, `student_id`, `price`, `status`, `created_on`) VALUES
+(1, 1, 2, 22, 20, 0, '2017-11-22 07:03:38'),
+(2, 2, 2, 22, 10, 1, '2017-11-22 07:03:41'),
+(3, 3, 2, 22, 16, 1, '2017-11-22 07:03:44'),
+(4, 4, 2, 22, 9, 2, '2017-11-22 07:03:48'),
+(5, 5, 2, 22, 18, 1, '2017-11-22 07:03:51'),
+(6, 6, 2, 22, 20, 0, '2017-11-22 07:03:57');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `type` int(11) DEFAULT NULL,
+  `deadline` date DEFAULT NULL,
+  `price` varchar(10) DEFAULT NULL,
+  `discipline` int(11) NOT NULL,
+  `format` int(11) NOT NULL,
+  `academinc_level` int(11) NOT NULL,
+  `volume` varchar(200) NOT NULL,
+  `service_type` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  `views` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='order table for auctions';
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `title`, `type`, `deadline`, `price`, `discipline`, `format`, `academinc_level`, `volume`, `service_type`, `status`, `views`, `user_id`, `created`) VALUES
+(1, 'Sample 2', 1, '2017-10-04', '15', 1, 1, 1, 'nothing', 1, 1, 11, 1, '2017-10-31 10:22:33'),
+(2, 'Sample 1', 2, '2017-10-04', '15', 1, 1, 1, 'nothing', 1, 1, 11, 1, '2017-10-31 10:22:46'),
+(3, 'Test 1', 3, '2017-10-26', '13', 3, 3, 3, 'nothing', 3, 1, 33, 3, '2017-10-31 10:23:55'),
+(4, 'Test 2', 1, '2017-10-26', '13', 3, 3, 3, 'nothing', 3, 1, 33, 3, '2017-10-31 10:24:00'),
+(5, 'Example 1', 3, '2017-11-16', '12', 1, 1, 1, 'nothing', 1, 1, 1200, 3, '2017-11-02 09:22:12'),
+(6, 'Example 2', 3, '2017-11-16', '12', 1, 1, 1, 'nothing', 1, 1, 1200, 3, '2017-11-02 09:22:16'),
+(12, 'Calculus', 5, '2017-11-15', '15', 1, 1, 1, 'second', 1, 1, 132, 1, '2017-11-02 09:30:13'),
+(13, 'Algebra', 5, '2017-11-23', '152', 1, 1, 1, 'third', 1, 1, 167, 1, '2017-11-02 09:30:13'),
+(14, 'Geometry', 5, '2017-11-15', '14', 1, 1, 1, 'Lines', 1, 1, 80, 1, '2017-11-02 09:30:13'),
+(15, 'Balance Sheet', 3, '2017-11-10', '15', 1, 1, 1, 'Abc', 1, 1, 10, 1, '2017-11-02 09:30:13'),
+(16, 'Credits', 4, '2017-11-14', '15', 1, 1, 1, 'Abc', 1, 1, 17, 1, '2017-11-02 09:30:13'),
+(17, 'DEbits', 2, '2017-11-04', '11', 1, 1, 1, 'Abc', 1, 1, 1, 1, '2017-11-02 09:30:13'),
+(18, 'Abc', 1, '2017-11-30', '10', 1, 1, 1, 'Abc', 1, 1, 190, 1, '2017-11-02 09:30:13'),
+(19, 'Calculus', 5, '2017-11-15', '15', 1, 1, 1, 'second', 1, 1, 132, 1, '2017-11-02 09:30:18'),
+(20, 'Algebra', 5, '2017-11-23', '152', 1, 1, 1, 'third', 1, 1, 167, 1, '2017-11-02 09:30:18'),
+(21, 'Geometry', 5, '2017-11-15', '14', 1, 1, 1, 'Lines', 1, 1, 80, 1, '2017-11-02 09:30:18'),
+(22, 'Balance Sheet', 3, '2017-11-10', '15', 1, 1, 1, 'Abc', 1, 1, 10, 1, '2017-11-02 09:30:18'),
+(23, 'Credits', 4, '2017-11-14', '15', 1, 1, 1, 'Abc', 1, 1, 17, 1, '2017-11-02 09:30:18'),
+(24, 'DEbits', 2, '2017-11-04', '11', 1, 1, 1, 'Abc', 1, 1, 1, 1, '2017-11-02 09:30:18'),
+(25, 'Abc', 1, '2017-11-30', '10', 1, 1, 1, 'Abc', 1, 1, 190, 1, '2017-11-02 09:30:18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `order_types`
+--
+
+CREATE TABLE `order_types` (
+  `id` int(11) NOT NULL,
+  `type` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='auctions type';
+
+--
+-- Dumping data for table `order_types`
+--
+
+INSERT INTO `order_types` (`id`, `type`) VALUES
+(1, 'Others'),
+(2, 'Econimics'),
+(3, 'Computer'),
+(4, 'Biology'),
+(5, 'Mathmatics');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `paper_type`
+--
+
+CREATE TABLE `paper_type` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `paper_type`
+--
+
+INSERT INTO `paper_type` (`id`, `name`, `created_on`) VALUES
+(1, 'Other Type', '2017-10-30 20:41:56'),
+(2, 'Case Study', '2017-10-30 20:41:56'),
+(3, 'Code', '2017-10-30 20:41:56'),
+(4, 'Lab Report', '2017-10-30 20:41:56'),
+(5, 'Math Assignment', '2017-10-30 20:41:56'),
+(6, 'Non-Word Assignment', '2017-10-30 20:41:56'),
+(7, 'Personal Statement', '2017-10-30 20:41:56'),
+(8, 'PowerPoint Presentation', '2017-10-30 20:41:56'),
+(9, 'Paraphrasing', '2017-10-30 20:41:56'),
+(10, 'Proofreading', '2017-10-30 20:41:56'),
+(11, 'Dissertation Proposal', '2017-10-30 20:41:56'),
+(12, 'Annotated Bibliography', '2017-10-30 20:41:56'),
+(13, 'Outline', '2017-10-30 20:41:56'),
+(14, 'Speech / Presentation', '2017-10-30 20:41:56'),
+(15, 'Business Plan', '2017-10-30 20:41:56'),
+(16, 'Creative Writing', '2017-10-30 20:41:56'),
+(17, 'Thesis Proposal', '2017-10-30 20:41:56'),
+(18, 'Thesis', '2017-10-30 20:41:56'),
+(19, 'Dissertation', '2017-10-30 20:41:56'),
+(20, 'Reports', '2017-10-30 20:41:56'),
+(21, 'Literature / Movie Review', '2017-10-30 20:41:56'),
+(22, 'Article', '2017-10-30 20:41:56'),
+(23, 'Term Paper', '2017-10-30 20:41:56'),
+(24, 'Course Work', '2017-10-30 20:41:56'),
+(25, 'Research Proposal', '2017-10-30 20:41:56'),
+(26, 'Research Paper', '2017-10-30 20:41:56'),
+(27, 'Admission / Scholarship Essay', '2017-10-30 20:41:56'),
+(28, 'Essay', '2017-10-30 20:41:56');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reset_requests`
+--
+
+CREATE TABLE `reset_requests` (
+  `id` int(11) NOT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `code` varchar(200) DEFAULT NULL,
+  `created` date DEFAULT NULL,
+  `used` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='password reset requests';
+
+--
+-- Dumping data for table `reset_requests`
+--
+
+INSERT INTO `reset_requests` (`id`, `email`, `code`, `created`, `used`) VALUES
+(1, 'syed.oliveteck@gmail.com', '6Qz2ExGSND1YBfXxOJVuIei0NaUpYeTE', NULL, 1),
+(2, 'syed.oliveteck@gmail.com', 'dqIDEJ2bjzUWoOekTmbKHA1OMriSh6UX', NULL, 1),
+(3, 'syed.oliveteck@gmail.com', 'rZYpgkLR0DMdxISB2JqjnnOcUDLtMR4u', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `role`
+--
+
+CREATE TABLE `role` (
+  `id` int(11) NOT NULL,
+  `type` varchar(100) DEFAULT NULL COMMENT 'type of user\n'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='definitive roles';
+
+--
+-- Dumping data for table `role`
+--
+
+INSERT INTO `role` (`id`, `type`) VALUES
+(1, 'Student'),
+(2, 'Writer');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student`
+--
+
+CREATE TABLE `student` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `user_id` int(11) DEFAULT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`id`, `name`, `status`, `user_id`, `created_on`) VALUES
+(1, 'Masood', 1, 22, '2017-11-06 07:29:01'),
+(2, 'Shiekh', 1, 21, '2017-11-06 07:29:01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subject`
+--
+
+CREATE TABLE `subject` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `subject`
+--
+
+INSERT INTO `subject` (`id`, `name`, `created_on`) VALUES
+(1, 'Formal & Natural Sciences', '2017-10-30 20:42:52'),
+(2, 'Social Sciences', '2017-10-30 20:42:52'),
+(3, 'Humanities', '2017-10-30 20:42:57'),
+(4, 'Other', '2017-10-30 20:42:57');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_subject`
+--
+
+CREATE TABLE `sub_subject` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `subject_id` int(11) DEFAULT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sub_subject`
+--
+
+INSERT INTO `sub_subject` (`id`, `name`, `subject_id`, `created_on`) VALUES
+(1, 'Astronomy', 1, '2017-10-30 20:45:59'),
+(2, 'Computer Science', 1, '2017-10-30 20:45:59'),
+(3, 'Mathmatics', 1, '2017-10-30 20:45:59'),
+(4, 'Biology', 1, '2017-10-30 20:45:59'),
+(5, 'Chemistry', 1, '2017-10-30 20:45:59'),
+(6, 'Physics', 1, '2017-10-30 20:45:59'),
+(7, 'Statistics', 1, '2017-10-30 20:45:59'),
+(8, 'Environmental Sciences', 1, '2017-10-30 20:45:59'),
+(9, 'Geology', 1, '2017-10-30 20:45:59'),
+(10, 'Information Technology', 1, '2017-10-30 20:45:59'),
+(11, 'Economics', 2, '2017-10-30 20:45:59'),
+(12, 'Geography', 2, '2017-10-30 20:45:59'),
+(13, 'Psychology', 2, '2017-10-30 20:45:59'),
+(14, 'Sociology', 2, '2017-10-30 20:45:59'),
+(15, 'Anthropology', 2, '2017-10-30 20:45:59'),
+(16, 'Archaeology', 2, '2017-10-30 20:45:59'),
+(17, 'Cultural Studies', 2, '2017-10-30 20:45:59'),
+(18, 'Finance', 2, '2017-10-30 20:45:59'),
+(19, 'Politics', 2, '2017-10-30 20:45:59'),
+(20, 'Social Work', 2, '2017-10-30 20:45:59'),
+(21, 'History', 3, '2017-10-30 20:46:02'),
+(22, 'Philosophy', 3, '2017-10-30 20:46:02'),
+(23, 'Religion', 3, '2017-10-30 20:46:02'),
+(24, 'Arts', 3, '2017-10-30 20:46:02'),
+(25, 'Education', 3, '2017-10-30 20:46:02'),
+(26, 'English Language', 3, '2017-10-30 20:46:02'),
+(27, 'Human Rights', 3, '2017-10-30 20:46:02'),
+(28, 'Linguistics', 3, '2017-10-30 20:46:02'),
+(29, 'Literature', 3, '2017-10-30 20:46:02'),
+(30, 'Music', 3, '2017-10-30 20:46:02'),
+(31, 'Law', 4, '2017-10-30 20:46:02'),
+(32, 'Marketing', 4, '2017-10-30 20:46:02'),
+(33, 'Public Relations', 4, '2017-10-30 20:46:02'),
+(34, 'Engineering', 4, '2017-10-30 20:46:02'),
+(35, 'Accounting', 4, '2017-10-30 20:46:02'),
+(36, 'Architecture', 4, '2017-10-30 20:46:02'),
+(37, 'Banking', 4, '2017-10-30 20:46:02'),
+(38, 'Business', 4, '2017-10-30 20:46:02'),
+(39, 'Childcare', 4, '2017-10-30 20:46:02'),
+(40, 'Communications', 4, '2017-10-30 20:46:02'),
+(41, 'Construction', 4, '2017-10-30 20:47:12'),
+(42, 'Criminology', 4, '2017-10-30 20:47:12'),
+(43, 'Employment', 4, '2017-10-30 20:47:12'),
+(44, 'Fashion', 4, '2017-10-30 20:47:12'),
+(45, 'Film Studies', 4, '2017-10-30 20:47:12'),
+(46, 'Health', 4, '2017-10-30 20:47:12'),
+(47, 'Journalism', 4, '2017-10-30 20:47:12'),
+(48, 'Management', 4, '2017-10-30 20:47:12'),
+(49, 'Media', 4, '2017-10-30 20:47:12'),
+(50, 'Medical', 4, '2017-10-30 20:47:12'),
+(51, 'Nursing', 4, '2017-10-30 20:47:12'),
+(52, 'Physical Education', 4, '2017-10-30 20:47:12'),
+(53, 'Project Management', 4, '2017-10-30 20:47:12'),
+(54, 'Sports', 4, '2017-10-30 20:47:12'),
+(55, 'Technology', 4, '2017-10-30 20:47:12'),
+(56, 'Tourism', 4, '2017-10-30 21:06:13'),
+(57, 'Other', 4, '2017-10-30 21:06:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `password` varchar(200) DEFAULT NULL,
+  `activation_code` varchar(200) DEFAULT NULL,
+  `verified` tinyint(4) DEFAULT '0',
+  `role` int(11) DEFAULT NULL,
+  `created` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='users table just for login setup ';
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `activation_code`, `verified`, `role`, `created`) VALUES
+(2, 'Admin', 'admin@gmail.com', '123', NULL, 0, 2, NULL),
+(3, 'Main Admin', 'admin123@gmail.com', '123', NULL, 0, 2, NULL),
+(4, 'Chota Admin', 'admin13@gmail.com', '123', NULL, 0, 2, NULL),
+(5, 'Syed', 'syed.olivetec@gmail.com', '001', NULL, 0, 2, NULL),
+(20, 'Faizan', 'syed.oliveteck@gmail.com', '123', 'AsX44YKRD8Jd0NdG0Fhy4hNU6ZOaWpbWNLQN5s1A', 1, 2, NULL),
+(21, 'Shiekh', 'sheikh4991@gmail.com', 'pakkhi_01', 'yBfEPpmMI6gVdrroxfEFPxW6PLoKo0AvXm0vxTer', 0, 1, NULL),
+(22, 'Masood', 's.masood4991@gmail.com', 'pakkhi_01', 'f2TVl51Q21u0rX9U5tYzGeytWDOehvFdo2ZnRpYn', 0, 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `writer`
+--
+
+CREATE TABLE `writer` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `contact` varchar(25) DEFAULT NULL,
+  `country` varchar(60) DEFAULT NULL,
+  `city` varchar(60) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `rating` tinyint(1) DEFAULT '1',
+  `language` varchar(255) DEFAULT NULL,
+  `paper_type` varchar(255) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `image` varchar(255) DEFAULT NULL,
+  `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `writer`
+--
+
+INSERT INTO `writer` (`id`, `name`, `contact`, `country`, `city`, `address`, `user_id`, `rating`, `language`, `paper_type`, `status`, `image`, `created_on`) VALUES
+(1, 'Admin', '+9222221112', 'Saudi Arabia', 'Riyadh', 'Abc Street', 2, 3, 'English, Arabic, French', '1,6,7,8,15', 1, NULL, '2017-11-06 07:54:40'),
+(2, 'Main Admin', '+92344433332', 'Englnad', 'London', 'Abc Street', 3, 4, 'Urdu, Pashtu,English', '2,3,6,17', 1, NULL, '2017-11-06 07:54:40'),
+(3, 'Chota Admin', '+9222221112', 'Russia', 'Moscow', 'Abc Street', 4, 2, 'Dutch,English,Urdu', '25,22,4,11', 1, NULL, '2017-11-06 07:54:40'),
+(4, 'Syed', '+9222221112', 'Wales', 'kuch hoga', 'Abc Street', 5, 5, 'Urdu,English', '15,19,20', 1, NULL, '2017-11-06 07:54:40'),
+(5, 'Faizan', '+9222221112', 'Iceland', 'Capital', 'Abc Street', 20, 1, 'Urdu, Arabic', '1,2', 1, NULL, '2017-11-06 07:54:40');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `assignment`
+--
+ALTER TABLE `assignment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `assignment_bid`
+--
+ALTER TABLE `assignment_bid`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `assignment_format`
+--
+ALTER TABLE `assignment_format`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bids`
+--
+ALTER TABLE `bids`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `bids` ADD FULLTEXT KEY `description` (`description`);
+
+--
+-- Indexes for table `bid_comments`
+--
+ALTER TABLE `bid_comments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bid_review`
+--
+ALTER TABLE `bid_review`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `order_types`
+--
+ALTER TABLE `order_types`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `paper_type`
+--
+ALTER TABLE `paper_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `reset_requests`
+--
+ALTER TABLE `reset_requests`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `role`
+--
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `subject`
+--
+ALTER TABLE `subject`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sub_subject`
+--
+ALTER TABLE `sub_subject`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `writer`
+--
+ALTER TABLE `writer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `assignment`
+--
+ALTER TABLE `assignment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `assignment_bid`
+--
+ALTER TABLE `assignment_bid`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+--
+-- AUTO_INCREMENT for table `assignment_format`
+--
+ALTER TABLE `assignment_format`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `bids`
+--
+ALTER TABLE `bids`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `bid_comments`
+--
+ALTER TABLE `bid_comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `bid_review`
+--
+ALTER TABLE `bid_review`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `message`
+--
+ALTER TABLE `message`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+--
+-- AUTO_INCREMENT for table `order`
+--
+ALTER TABLE `order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+--
+-- AUTO_INCREMENT for table `paper_type`
+--
+ALTER TABLE `paper_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+--
+-- AUTO_INCREMENT for table `reset_requests`
+--
+ALTER TABLE `reset_requests`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `role`
+--
+ALTER TABLE `role`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `student`
+--
+ALTER TABLE `student`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `subject`
+--
+ALTER TABLE `subject`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `sub_subject`
+--
+ALTER TABLE `sub_subject`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+--
+-- AUTO_INCREMENT for table `writer`
+--
+ALTER TABLE `writer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

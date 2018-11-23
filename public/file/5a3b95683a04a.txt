@@ -1,0 +1,73 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Dec 21, 2017 at 12:20 PM
+-- Server version: 5.7.20-0ubuntu0.16.04.1
+-- PHP Version: 7.1.11-1+ubuntu16.04.1+deb.sury.org+1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ecom`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `setting`
+--
+
+CREATE TABLE `setting` (
+  `id` int(11) NOT NULL,
+  `image1` varchar(100) NOT NULL,
+  `image2` varchar(100) NOT NULL,
+  `image3` varchar(100) NOT NULL,
+  `image4` varchar(100) NOT NULL,
+  `image5` varchar(100) NOT NULL,
+  `image6` varchar(100) NOT NULL,
+  `slide1` varchar(255) DEFAULT NULL,
+  `slide2` varchar(255) DEFAULT NULL,
+  `slide3` varchar(255) DEFAULT NULL,
+  `slide4` varchar(255) DEFAULT NULL,
+  `slide5` varchar(255) DEFAULT NULL,
+  `shipping` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `setting`
+--
+
+INSERT INTO `setting` (`id`, `image1`, `image2`, `image3`, `image4`, `image5`, `image6`, `slide1`, `slide2`, `slide3`, `slide4`, `slide5`, `shipping`) VALUES
+(1, '5a295007e336b.png', '5a295337d720c.png', '5a295007e4d95.png', '5a295007e645e.png', '5a295007e7144.png', '5a295007e8c7e.png', '5a295007e8c7e.png', '5a30f333bab69.png', '5a295007e645e.png', '5a295007e4d95.png', '5a295007e7144.png', 200);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `setting`
+--
+ALTER TABLE `setting`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `setting`
+--
+ALTER TABLE `setting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

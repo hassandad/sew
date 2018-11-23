@@ -1,0 +1,12 @@
+.notmatch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    border-radius: 5px;
+}
